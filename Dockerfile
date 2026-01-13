@@ -6,8 +6,9 @@ WORKDIR /hytale
 
 # Install dependencies
 # su-exec: allow stepping down from root to user
-# libc6-compat: required for the downloader binary on Alpine
-RUN apk add --no-cache curl unzip libc6-compat su-exec
+# libc6-compat & gcompat: required for glibc-linked binaries (Netty/Quiche) on Alpine
+# libgcc: required by libnetty_quiche
+RUN apk add --no-cache curl unzip libc6-compat gcompat libgcc su-exec
 
 # Download and install Hytale Downloader CLI
 RUN curl -L https://downloader.hytale.com/hytale-downloader.zip -o /tmp/downloader.zip && \

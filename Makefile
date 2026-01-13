@@ -1,7 +1,7 @@
 # Variables
 DOCKER_COMPOSE = docker compose
 
-.PHONY: help up down restart logs ps pull clean
+.PHONY: help up down restart logs ps pull clean console
 
 help: ## Show this help message
 	@echo "Usage: make [target]"
@@ -28,3 +28,6 @@ pull: ## Pull the latest images
                   
 clean: ## Stop and remove containers, networks, and volumes
 	$(DOCKER_COMPOSE) down -v
+
+console: ## Attach to the server console
+	docker attach hytale-server

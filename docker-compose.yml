@@ -2,6 +2,8 @@ services:
   hytale-server:
     build: .
     container_name: hytale-server
+    tty: true
+    stdin_open: true
     restart: unless-stopped
     env_file: .env
     environment:
