@@ -1,4 +1,6 @@
-# Hytale Server Docker 🚀
+# Hytale Server Docker 🎮
+
+![Hytale Server](https://hytale.com/static/images/logo.png)
 
 Official-manual-aligned Docker environment for running a **Hytale Server** using Java 25.
 
