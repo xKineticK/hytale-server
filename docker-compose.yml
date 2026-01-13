@@ -1,0 +1,27 @@
+services:
+  hytale-server:
+    build: .
+    container_name: hytale-server
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - HYTALE_RAM=${HYTALE_RAM}
+      - HYTALE_JAR=${HYTALE_JAR}
+      - HYTALE_ASSETS=${HYTALE_ASSETS}
+      - HYTALE_DOWNLOADER_TOKEN=${HYTALE_DOWNLOADER_TOKEN}
+    ports:
+      - "${HYTALE_PORT}:5520/udp"
+    volumes:
+      - ./data:/hytale
+    deploy:
+      resources:
+        limits:
+          memory: 6G
+        reservations:
+          memory: 4G
+    networks:
+      - hytale-net
+
+networks:
+  hytale-net:
+    driver: bridge
