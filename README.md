@@ -20,7 +20,7 @@ Official-manual-aligned Docker environment for running a **Hytale Server** using
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/hytale-server.git
+   git clone https://github.com/xKineticK/hytale-server.git
    cd hytale-server
    ```
 
