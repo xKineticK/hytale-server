@@ -11,12 +11,12 @@ Official-manual-aligned Docker environment for running a **Hytale Server** using
 - **Official Specs**: Pre-configured to use the official command line arguments and UDP 5520 port.
 - **Easy Management**: Uses `docker-compose` and a `Makefile` for common tasks.
 
-## 🛠️ Requirements
+## Requirements
 - Docker & Docker Compose
 - A valid Hytale account (for OAuth authentication)
 - At least 4GB of RAM dedicated to the server
 
-## 🚀 Quick Start
+## Quick Start
 
 1. **Clone the repository**:
    ```bash
@@ -43,10 +43,10 @@ Official-manual-aligned Docker environment for running a **Hytale Server** using
    ```
    Visit the Hytale OAuth URL provided in the logs and enter the code.
 
-## 📁 Directory Structure
+## Directory Structure
 - `data/`: (Auto-created) Stores server binaries, `Assets.zip`, and world data.
 - `Dockerfile`: Multi-stage build with Downloader CLI and Java 25.
 - `entrypoint.sh`: Intelligent script for permissions and startup logic.
 
-## ⚖️ License
+## License
 MIT License. Content from Hytale is subject to Hypixel Studios terms.
