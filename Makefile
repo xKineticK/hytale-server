@@ -10,7 +10,9 @@ help: ## Show this help message
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2}'
 
 up: ## Start the stack in detached mode
+	@./scripts/auth.sh
 	$(DOCKER_COMPOSE) up -d
+	$(DOCKER_COMPOSE) logs -f
 
 down: ## Stop the stack and remove containers
 	$(DOCKER_COMPOSE) down

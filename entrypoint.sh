@@ -47,4 +47,5 @@ fi
 
 # 5. START SERVER
 echo "Starting Hytale Server with ${HYTALE_RAM} of RAM..."
-exec su-exec hytale java -Xmx${HYTALE_RAM} -jar "/hytale/$HYTALE_JAR" --assets "$HYTALE_ASSETS"
+exec su-exec hytale java -Xmx${HYTALE_RAM} -jar "/hytale/$HYTALE_JAR" \
+--assets "$HYTALE_ASSETS"
